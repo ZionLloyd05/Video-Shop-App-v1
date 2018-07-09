@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-9">
+    <video-detail *ngIf="selectedVideo; else noVideoTemp"></video-detail>
+  </div>
+  <div class="col-sm-3">
+    <video-list (selectedVideo)="onSelectVideo($event)"></video-list>
+  </div>
+</div>
+<ng-template #noVideoTemp>
+  <h2>No Video was selected!!!</h2>
+</ng-template>
+<!-- [video]="selectedVideo" -->
+<!-- [videos] = "videos" -->
